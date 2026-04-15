@@ -1,0 +1,11 @@
+<p appMyDirective>Nazwa reaktora: {{ reactorName }}</p>
+<p>Temperatura Signal: {{temperatureSignal() }} C</p>
+<button (click)="increaseTemperature()" [disabled]="temperatureSignal() >= 100">Podnieś temperature</button>
+
+<!-- <p *ngIf="temperature<16">Rdzeń reaktora jest zimny</p>
+<p *ngIf="temperature>=16 && temperature<=90">Temperatura reaktora jest w normie</p>
+<p *ngIf="temperature>90">Reaktor jest w stanie krytycznym</p> -->
+
+<p>{{ temperatureStatus() }}</p>
+
+<hr>
